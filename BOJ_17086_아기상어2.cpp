@@ -1,3 +1,6 @@
+/*
+간단한 bfs 문제인듯! 한 번에 풀었다-
+*/
 #include<iostream>
 #include<cstdio>
 #include<vector>
