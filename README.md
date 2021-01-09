@@ -13,3 +13,6 @@ https://www.acmicpc.net/workbook/view/4357
 > Named Algorithm (MergeSort,Quick,Heep,Binary Search...)
 
 * 알고리즘 강의 찾아듣자..!!
+
+* 참고한 사이트
+- DP 문제: 12865(배낭) https://gsmesie692.tistory.com/113 
