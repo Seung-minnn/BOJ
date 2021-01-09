@@ -1,5 +1,5 @@
 # BOJ
-Backjoon
+##Backjoon
 
 * 1일 1코딩 목표
 https://www.acmicpc.net/workbook/view/4357
@@ -16,5 +16,5 @@ https://www.acmicpc.net/workbook/view/4357
 
 <u></u>
 
-# 참고한 사이트
+## 참고한 사이트
 * DP 문제: 12865(배낭) https://gsmesie692.tistory.com/113 
