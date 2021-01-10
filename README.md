@@ -5,7 +5,7 @@
 https://www.acmicpc.net/workbook/view/4357
 
 * 알고리즘 체계적으로 정리
-
+- DP 작은 문제로 쪼개기 반복을 찾자..!! Memorization
 
 >Hash(Memory Pool/Chanining) <br />
 >DFS 훈련, BFS 훈련 <br />
