@@ -13,7 +13,7 @@ https://www.acmicpc.net/workbook/view/4357
 >Greedy / Dynamic Programming <br />
 >Named Algorithm (MergeSort,Quick,Heep,Binary Search...) <br />
 
-* 알고리즘 강의 찾아듣자..!!
+* 알고리즘 강의 찾아듣자..!!!
 
 <u></u>
 
