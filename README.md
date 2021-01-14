@@ -15,6 +15,8 @@ https://www.acmicpc.net/workbook/view/4357
 
 * 알고리즘 강의 찾아듣자..!!!
 
+* 경로탐색 a*알고리즘 다시 공부하자
+
 <u></u>
 
 ## 참고한 사이트
