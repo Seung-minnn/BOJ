@@ -1,0 +1,162 @@
+/*
+왜 틀렸지?ㅠㅠㅠㅠ 이해가 안간다... 우선 제출하고 내일 다시 풀어보자..
+*/
+
+#include<cstdio>
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main() {
+	int n, b;
+	int map[6][6];
+	cin >> n >> b;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			int temp;
+			cin >> temp;
+			map[i][j] = temp;
+		}
+	}
+
+	//0(logn)
+	int map2[6][6],ans[6][6];
+	memcpy(map2, map, sizeof(map2));
+	memset(ans, 1, sizeof(ans));
+	
+	int time = b;
+	bool start = false;
+	while (time) {
+		if (time % 2 == 1) {
+			time -= 1;
+			
+			if (start == false) {
+				start = true;
+				memcpy(ans, map2, sizeof(ans));
+			}
+			else {
+				int t1[6][6];
+
+				for (int i = 0; i < n; i++) {
+					for (int j = 0; j < n; j++) {
+
+						if (n == 2) {
+							t1[i][j] = ans[i][0] * map2[0][j] + ans[i][1] * map2[1][j];
+						}
+
+						else if (n == 3) {
+							t1[i][j] = ans[i][0] * map2[0][j] + ans[i][1] * map2[1][j] + ans[i][2] * map2[2][j];
+						}
+
+						else if (n == 4) {
+							t1[i][j] = ans[i][0] * map2[0][j] + ans[i][1] * map2[1][j] + ans[i][2] * map2[2][j] + ans[i][3] * map2[3][j];
+						}
+
+						else if (n == 5) {
+							t1[i][j] = ans[i][0] * map2[0][j] + ans[i][1] * map2[1][j] + ans[i][2] * map2[2][j] + ans[i][3] * map2[3][j] + ans[i][4] * map2[4][j];
+						}
+
+
+						if (t1[i][j] > 1000) {
+							t1[i][j] %= 1000;
+						}
+					}
+				}
+
+				memcpy(ans, t1, sizeof(ans));
+			}
+		}
+		else {
+			time /= 2;
+
+			int t1[6][6];
+			for (int i = 0; i < n; i++) {
+				for (int j = 0; j < n; j++) {
+					if (n == 2) {
+						t1[i][j] = map2[i][0] * map2[0][j] + map2[i][1] * map2[1][j];
+					}
+
+					else if (n == 3) {
+						t1[i][j] = map2[i][0] * map2[0][j] + map2[i][1] * map2[1][j] + map2[i][2] * map2[2][j];
+					}
+
+					else if (n == 4) {
+						t1[i][j] = map2[i][0] * map2[0][j] + map2[i][1] * map2[1][j] + map2[i][2] * map2[2][j] + map2[i][3] * map2[3][j];
+					}
+
+					else if (n == 5) {
+						t1[i][j] = map2[i][0] * map2[0][j] + map2[i][1] * map2[1][j] + map2[i][2] * map2[2][j] + map2[i][3] * map2[3][j] + map2[i][4] * map2[4][j];
+					}
+
+
+					if (t1[i][j] > 1000) {
+						t1[i][j] %= 1000;
+					}
+				}
+			}
+
+			memcpy(map2, t1, sizeof(map2));
+		}
+
+
+
+		//for (int i = 0; i < n; i++) {
+		//	for (int j = 0; j < n; j++) {
+		//		cout << ans[i][j] << " ";
+		//	}
+		//	cout << "\n";
+		//}
+	}
+
+	/*
+	//0(n) 방법이라서 시간초과
+	int map2[6][6];
+	memcpy(map2, map, sizeof(map2));
+	for (int t = 1; t < b; t++) {
+		int map3[6][6];
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if (n == 2) {
+					map3[i][j] = map2[i][0] * map[0][j] + map2[i][1] * map[1][j];
+				}
+
+				else if (n == 3) {
+					map3[i][j] = map2[i][0] * map[0][j] + map2[i][1] * map[1][j] + map2[i][2] * map[2][j];
+				}
+
+				else if (n == 4) {
+					map3[i][j] = map2[i][0] * map[0][j] + map2[i][1] * map[1][j] + map2[i][2] * map[2][j] + map2[i][3] * map[3][j];
+				}
+
+				else if (n == 5) {
+					map3[i][j] = map2[i][0] * map[0][j] + map2[i][1] * map[1][j] + map2[i][2] * map[2][j] + map2[i][3] * map[3][j] + map2[i][4] * map[4][j];
+				}
+
+
+				if (map3[i][j] > 1000) {
+					map3[i][j] %= 1000;
+				}
+			}
+		}
+
+		memcpy(map2, map3, sizeof(map2));
+
+		//for (int i = 0; i < n; i++) {
+		//	for (int j = 0; j < n; j++) {
+		//		cout << map2[i][j] << " ";
+		//	}
+		//	cout << "\n";
+		//}	
+	}
+	*/
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			cout << ans[i][j]<<" ";
+		}
+		cout << "\n";
+	}
+	
+	return 0;
+}
