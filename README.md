@@ -17,9 +17,10 @@ https://www.acmicpc.net/workbook/view/4357
 
 * 경로탐색 a*알고리즘 다시 공부하기
 
-* c++
+* c++ 공부
 <u></u>
 
 ## 참고한 사이트
 * DP 문제: 12865(배낭) https://gsmesie692.tistory.com/113 
 ** 열 가방 무게 리스트, 행 가방들 인덱스
+
